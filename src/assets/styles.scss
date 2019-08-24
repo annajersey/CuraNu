@@ -1,7 +1,8 @@
 @font-face {
   font-family: "Open Sans Bold";
-  src: url("fonts/opensans-bold.otf"),
-  url("fonts/opensans-bold.ttf"),
+  src: url("fonts/opensans-bold.ttf"),
+  url("fonts/opensans-bold.otf"),
+  url("fonts/opensans-bold.eot"),
   url("fonts/opensans-bold.woff2") format("woff2"),
   url("fonts/opensans-bold.woff") format("woff");
   font-weight: normal;
@@ -10,14 +11,38 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("fonts/opensans-regular.otf"),
-  url("fonts/opensans-regular.ttf"),
+  src: url("fonts/opensans-regular.ttf"),
+  url("fonts/opensans-regular.otf"),
+  url("fonts/opensans-regular.eot"),
   url("fonts/opensans-regular.woff2") format("woff2"),
   url("fonts/opensans-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Open Sans Light";
+  src: url("fonts/opensans-light.ttf"),
+  url("fonts/opensans-light.eot"),
+  url("fonts/opensans-light.woff2") format("woff2"),
+  url("fonts/opensans-light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1180px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
