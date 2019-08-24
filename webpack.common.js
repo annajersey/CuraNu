@@ -57,6 +57,7 @@ module.exports = {
             },
             {
                 test: /\.svg$/,
+                issuer: /\.js?$/,
                 use: [
                     {
                         loader: "babel-loader"

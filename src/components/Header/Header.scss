@@ -1,3 +1,5 @@
+@import "../../assets/variables";
+
 header {
   .topNav {
     display: flex;
@@ -8,7 +10,7 @@ header {
   }
 
   ul {
-    color: #949FB3;
+    color: $default;
     font-size: 14px;
     margin: 0;
 
@@ -23,14 +25,14 @@ header {
     display: inline-block;
     width: 49px;
     height: 49px;
-    background: #E5F0FA;
+    background: $light-blue;
     text-align: center;
     padding: 10px;
     margin-left: 12px;
     position: relative;
-
+    cursor: pointer;
     svg {
-      fill: #949FB3;
+      fill: $default;
     }
   }
 
@@ -45,15 +47,16 @@ header {
     right: 8px;
     top: 12px;
     font-size: 9px;
-    color: #fff;
+    color: $white;
     border-radius: 50%;
   }
 
   .logo {
     display: flex;
-    font-family: "Open Sans Bold", sans-serif;
+    font-family: $open-sans-bold;
     font-size: 22px;
     padding-top: 15px;
+    padding-bottom: 30px;
 
     .logoTitle {
       padding-top: 7px;
@@ -67,14 +70,12 @@ header {
     }
 
     .logoSubtitle {
-      font-family: "Open Sans Light", sans-serif;
+      font-family: $open-sans-light;
       font-size: 14px;
     }
 
     span {
-      font-family: "Open Sans Light", sans-serif;
+      font-family: $open-sans-light;
     }
   }
 }
-
-

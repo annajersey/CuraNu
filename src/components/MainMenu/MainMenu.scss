@@ -1,0 +1,50 @@
+@import "../../assets/variables";
+
+.mainMenu {
+  background: #9E419C;
+  width: 100%;
+
+  .container {
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  li {
+    display: inline-block;
+    list-style: none;
+    color: $white;
+    font-family: $open-sans-bold;
+    text-transform: uppercase;
+    margin-left: 53px;
+    font-size: 16px;
+
+    a {
+      color: $white;
+    }
+  }
+
+  .searchBox {
+    display: flex;
+
+    input {
+      width: 334px;
+      height: 45px;
+      border: none;
+      color: #9E419C;
+      font-size: 16px;
+      outline: none;
+      padding: 0 15px;
+    }
+
+    .searchButton {
+      background: $light-blue url("../../assets/images/search.png") no-repeat center center;
+      width: 45px;
+      height: 45px;
+      border: 0;
+      cursor: pointer;
+    }
+
+  }
+}
