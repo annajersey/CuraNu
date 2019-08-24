@@ -1,4 +1,9 @@
 import React from "react";
-const App = () => <div>Youwe Test</div>
+import Header from "./components/Header/Header";
+
+const App = () =>
+    <main>
+        <Header />
+    </main>;
 
 export default App;

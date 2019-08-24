@@ -36,25 +36,57 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|jpe?g|svg)/i,
+                test: /\.(png|jpe?g)/i,
                 use: [
                     {
                         loader: "url-loader",
                         options: {
-                            name: "img/[path][name].[ext]",
-                            context: "src/assets/images",
+                            name: "img/[name].[ext]",
+
                             limit: 1000
                         }
                     },
                     {
                         loader: "img-loader",
                         options: {
-                            name: "img/[path][name].[ext]",
-                            context: "src/assets/images"
+                            name: "img/[name].[ext]",
+
                         }
                     }
                 ]
-            }
+            },
+            {
+                test: /\.svg$/,
+                use: [
+                    {
+                        loader: "babel-loader"
+                    },
+                    {
+                        loader: "react-svg-loader",
+                        options: {
+                            svgo: {
+                                plugins: [
+                                    {
+                                        removeTitle: true,
+                                    },
+                                    {
+                                        cleanupIDs: {
+                                            prefix: {
+                                                toString() {
+                                                    this.counter = this.counter || 0;
+                                                    return `id-${this.counter++}`;
+                                                }
+                                            }
+                                        }
+                                    },
+                                ],
+                                floatPrecision: 3,
+                            },
+                            jsx: true
+                        }
+                    }
+                ]
+            },
         ]
     },
     plugins: [

@@ -7,7 +7,7 @@ const MinifyPlugin = require("babel-minify-webpack-plugin");
 const basePath = "/dist/";
 module.exports = merge(baseConfig, {
     output: {
-        publicPath: basePath
+        publicPath: ""
     },
     optimization: {
         minimizer: [
