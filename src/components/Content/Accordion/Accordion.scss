@@ -1,0 +1,59 @@
+@import "../../../assets/variables";
+
+.accordionWrapper {
+  border: 1px solid $blue;
+  min-height: 50px;
+  flex-basis: calc(33.33% - 13px);
+  margin: 20px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordionItem {
+  display: flex;
+  flex-direction: column;
+
+  .accordionContent {
+    background-color: white;
+    overflow: hidden;
+    transition: height 0.6s ease;
+
+    p {
+      padding: 18px;
+      margin: 0;
+    }
+  }
+}
+
+.accordionItemHeader {
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $light-blue;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  .icon {
+    background: $light-blue;
+  }
+
+  svg {
+    transition: transform 0.3s ease;
+  }
+}
+
+.activeAccordionItem {
+  .accordionItemHeader {
+    background: #657189;
+  }
+
+  svg {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+  }
+}
+
+
+
+

@@ -25,6 +25,7 @@ header {
     margin-left: 12px;
     position: relative;
     cursor: pointer;
+
     svg {
       fill: $default;
     }
@@ -51,15 +52,17 @@ header {
     font-size: 22px;
     padding-top: 15px;
     padding-bottom: 30px;
+    color: #000;
 
     .logoTitle {
       padding-top: 7px;
       margin-left: 10px;
       line-height: 23px;
+
     }
 
     .subtitle {
-      padding-top: 24px;
+      padding-top: 22px;
       margin-left: 25px;
     }
 
