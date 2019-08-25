@@ -1,0 +1,17 @@
+@import "../../../../assets/variables";
+
+.linksWidget{
+  padding: 15px 27px 25px 27px;
+  li{
+    border-bottom: 1px solid $blue;
+    height: 73px;
+    display: flex;
+    align-items: center;
+
+    div{
+      width: 83px;
+      text-align: center;
+      margin-right: 42px;
+    }
+  }
+}

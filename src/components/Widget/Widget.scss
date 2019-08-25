@@ -1,0 +1,48 @@
+@import "../../assets/variables";
+
+.widget {
+  border: 1px solid $blue;
+  min-height: 50px;
+  flex-basis: calc(33.33% - 13px);
+  margin: 20px 0 20px 0;
+
+  .widgetContent {
+    font-size: 14px;
+    font-family: $open-sans;
+  }
+
+  .widgetHeader {
+    height: 49px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+  }
+}
+
+.widgetTitle {
+  color: $orange;
+  font-size: 18px;
+  font-family: $open-sans-bold;
+  text-transform: uppercase;
+  padding-left: 17px;
+}
+
+.widgetIcon {
+  background: $light-blue;
+}
+
+
+.widgetButtons {
+  display: flex;
+  margin-left: auto;
+
+
+  .closeButton {
+    background: $light-blue;
+  }
+
+  svg {
+    fill: $default;
+  }
+}

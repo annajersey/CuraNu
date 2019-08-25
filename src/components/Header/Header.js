@@ -22,7 +22,7 @@ const Header = () =>
             </div>
         </div>
         <div className="container logo">
-            <div><a href="#"><img src={require("./images/logo.png")}/></a></div>
+            <div><a href="#"><img src={require("../Content/Widgets/Links/images/topdesk.png")}/></a></div>
             <div className="logoTitle">Cura<span>Nu</span><div className="logoSubtitle">Zorg en welzijn</div></div>
             <div className="subtitle">Intranet</div>
         </div>

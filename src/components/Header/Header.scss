@@ -15,19 +15,13 @@ header {
     margin: 0;
 
     li {
-      list-style: none;
       display: inline-block;
       margin-right: 27px;
     }
   }
 
   .icon {
-    display: inline-block;
-    width: 49px;
-    height: 49px;
     background: $light-blue;
-    text-align: center;
-    padding: 10px;
     margin-left: 12px;
     position: relative;
     cursor: pointer;
@@ -70,7 +64,7 @@ header {
     }
 
     .logoSubtitle {
-      font-family: $open-sans-light;
+      font-family: "Raleway Light", sans-serif;
       font-size: 14px;
     }
 
