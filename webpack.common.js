@@ -41,16 +41,13 @@ module.exports = {
                     {
                         loader: "url-loader",
                         options: {
-                            name: "img/[name].[ext]",
-
-                            limit: 1000
+                            name: "img/[name].[ext]"
                         }
                     },
                     {
                         loader: "img-loader",
                         options: {
                             name: "img/[name].[ext]",
-
                         }
                     }
                 ]
@@ -65,38 +62,19 @@ module.exports = {
                     {
                         loader: "react-svg-loader",
                         options: {
-                            svgo: {
-                                plugins: [
-                                    {
-                                        removeTitle: true,
-                                    },
-                                    {
-                                        cleanupIDs: {
-                                            prefix: {
-                                                toString() {
-                                                    this.counter = this.counter || 0;
-                                                    return `id-${this.counter++}`;
-                                                }
-                                            }
-                                        }
-                                    },
-                                ],
-                                floatPrecision: 3,
-                            },
                             jsx: true
                         }
                     }
                 ]
             },
             {
-                test: /\.(woff(2)?|ttf|eot|otf)(\?v=\d+\.\d+\.\d+)?$/,
-                use: [{
-                    loader: "file-loader",
-                    options: {
-                        name: "[name].[ext]",
-                        outputPath: "fonts/"
-                    }
-                }]
+                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 100,
+                    name: 'fonts/[name].[hash:7].[ext]',
+                    publicPath: '../'
+                }
             }
         ]
     },
