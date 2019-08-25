@@ -8,12 +8,12 @@ const Header = () =>
         <div className="container topNav">
             <nav>
                 <ul>
-                    <li>Groepen</li>
-                    <li>Contact</li>
-                    <li>FAQ</li>
-                    <li>Smoelenboek</li>
-                    <li>Microblog</li>
-                    <li>Over ons</li>
+                    <li><a href="#">Groepen</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Smoelenboek</a></li>
+                    <li><a href="#">Microblog</a></li>
+                    <li><a href="#">Over ons</a></li>
                 </ul>
             </nav>
             <div className="account">
