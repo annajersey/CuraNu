@@ -42,11 +42,16 @@ body {
   margin: 0;
   padding: 0;
   color: $default;
+  min-height: 1000px;
 }
 
 .container {
-  width: 1180px;
+  width: 80%;
   margin: 0 auto;
+  @media screen and (max-width: 1335px) {
+    width: 1100px;
+    margin: 0 40px;
+  }
 }
 
 ul{
@@ -69,3 +74,4 @@ a{
 li{
   list-style: none;
 }
+

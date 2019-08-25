@@ -1,5 +1,5 @@
 import React from "react";
-import Widget from "../../../Widget/Widget";
+import Widget from "../../Widget/Widget";
 import "./Links.scss"
 
 const Links = () => <Widget icon={require("../widgetIcons/external-link.png")} title="Direct Naar">

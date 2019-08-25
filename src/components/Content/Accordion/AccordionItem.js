@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Accordion.scss";
-import "../../Widget/Widget.scss";
+import "../Widget/Widget.scss";
 import Arrow from "./images/arrow-right.svg"
 
 const AccordionItem = (props) =>{

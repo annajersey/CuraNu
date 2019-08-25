@@ -2,25 +2,27 @@
 
 .mainMenu {
   background: #9E419C;
-  width: 100%;
 
+  @media screen and (max-width: 1335px) {
+    display: inline-flex;
+  }
   .container {
     height: 85px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
+ul{
+  padding: 0;
+}
   li {
     display: inline-block;
-    color: $white;
-    font-family: $open-sans-bold;
-    text-transform: uppercase;
-    margin-left: 53px;
-    font-size: 16px;
-
+    margin-right: 53px;
     a {
+      font-size: 16px;
       color: $white;
+      font-family: $open-sans-bold;
+      text-transform: uppercase;
     }
   }
 
