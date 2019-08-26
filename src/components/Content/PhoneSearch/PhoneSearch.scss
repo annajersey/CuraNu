@@ -2,7 +2,7 @@
 
 .phoneSearch {
   height: 177px;
-  background: #00C4E6 url("./images/telephone.png") no-repeat center right;
+  background: $aqua-blue url("./images/telephone.png") no-repeat center right;
   padding: 11px 40px 11px 18px;
   color: $white;
   line-height: 36px;
@@ -25,7 +25,7 @@
       flex-basis: calc(100% - 44px);
       height: 40px;
       border: none;
-      color: $default;
+      color: $gray-blue;
       font-size: 15px;
       outline: none;
       padding: 0 15px;

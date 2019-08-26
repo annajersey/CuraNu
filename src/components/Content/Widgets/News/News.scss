@@ -32,17 +32,10 @@
     .newsMeta {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       font-family: $open-sans-light;
       padding-bottom: 13px;
     }
   }
-  .likes {
-    display:flex;
-    align-items: center;
-    font-size: 14px;
-    color: $default;
-    img{
-      margin-right: 2px;
-    }
-  }
+
 }

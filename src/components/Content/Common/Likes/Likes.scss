@@ -1,0 +1,11 @@
+@import "../../../../assets/variables";
+
+.likes {
+  display:flex;
+  align-items: center;
+  font-size: 14px;
+  color: $default;
+  img{
+    margin-right: 2px;
+  }
+}

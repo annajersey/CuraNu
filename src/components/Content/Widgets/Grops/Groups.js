@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./Groups.scss";
 import groupsData from "../../../../mockData/groups-data.json";
 
@@ -14,7 +13,5 @@ const Groups = () =>
         )}
     </ul>;
 
-Groups.propTypes = {
-    data: PropTypes.object.isRequired
-};
+
 export default Groups;

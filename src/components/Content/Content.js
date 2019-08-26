@@ -13,6 +13,7 @@ import Info from "./Widgets/Info/Info";
 import Polls from "./Widgets/Polls/Polls";
 import Groups from "./Widgets/Grops/Groups";
 import PhoneSearch from "./PhoneSearch/PhoneSearch";
+import MicroBlog from "./Widgets/MicroBlog/MicroBlog";
 
 const Content = () => {
     const [rerender, setRerenderLayout] = useState(1);
@@ -35,9 +36,13 @@ const Content = () => {
             <Widget type="links" title="Direct Naar" className="grid-block">
                 <Links data={linksData}/>
             </Widget>
-            <PhoneSearch className="grid-block" />
+            <Widget type="blog" title="MICROBLOG" className="grid-block" showMore="Toon meer">
+                <MicroBlog/>
+            </Widget>
+            <PhoneSearch className="grid-block"/>
+
             <Widget type="info" title="PEILINGEN" className="grid-block">
-                <Polls />
+                <Polls/>
             </Widget>
             <Widget type="links" title="MIJN LINKS" className="grid-block">
                 <Links data={MyLinksData}/>
@@ -46,13 +51,13 @@ const Content = () => {
                 <Info data={ManualLinksData}/>
             </Widget>
             <Widget className="grid-block" type="events" title="EVENEMENTEN" showMore="Meer evenementen">
-                <Events />
+                <Events/>
             </Widget>
             <Widget className="grid-block" type="events" title="NIEUWS" showMore="Meer nieuws">
-                <News />
+                <News/>
             </Widget>
             <Widget className="grid-block" type="groups" title="MIJN GROEPEN" showMore="Meer groepen">
-                <Groups />
+                <Groups/>
             </Widget>
         </Masonry>
     </div>;

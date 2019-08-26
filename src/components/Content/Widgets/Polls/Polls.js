@@ -6,5 +6,4 @@ const Polls = () =>
         <div className="noPolls">Er zijn geen peilingen beschikbaar</div>
     </div>;
 
-
 export default Polls;

@@ -1,6 +1,7 @@
 import React from "react";
 import "./News.scss";
 import newsData from "../../../../mockData/news-data.json";
+import Likes from "../../Common/Likes/Likes";
 
 const News = () =>
     <div className="newsWidget">
@@ -10,7 +11,7 @@ const News = () =>
                 <div className="newsBrief">
                     <div className="newsMeta">
                         <span>{item.date}</span>
-                        <div className="likes"><img src={require("./images/heart.png")} alt="likes"/>{item.likes}</div>
+                        <Likes likes={item.likes}/>
                     </div>
                     <span>{item.title}</span>
                 </div>
