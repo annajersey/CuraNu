@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import "./Blogs.scss"
+import React from "react";
+import PropTypes from "prop-types";
+import "./Blogs.scss";
 import BlogPost from "../BlogPost/BlogPost";
 
 const Blogs = ({posts}) => {

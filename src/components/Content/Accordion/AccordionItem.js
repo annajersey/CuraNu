@@ -33,6 +33,7 @@ const AccordionItem = (props) =>{
 AccordionItem.propTypes = {
     content: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    active: PropTypes.bool
+    active: PropTypes.bool,
+    setActiveIndex: PropTypes.func.isRequired
 };
 export default AccordionItem;

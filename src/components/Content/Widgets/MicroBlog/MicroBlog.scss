@@ -13,6 +13,8 @@
     border: 2px solid $blue;
     margin-bottom: 13px;
     color: $gray-blue;
+    font-size: 14px;
+    padding: 15px;
   }
 
   .formButtons {
@@ -43,6 +45,7 @@
       border: 0;
       margin-left: 5px;
       margin-right: 5px;
+      cursor: pointer;
     }
   }
 
@@ -54,4 +57,3 @@
     background: url("./images/link.png") no-repeat center center;
   }
 }
-

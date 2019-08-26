@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import "./BlogPost.scss"
+import React from "react";
+import PropTypes from "prop-types";
+import "./BlogPost.scss";
 import Likes from "../../Common/Likes/Likes";
 
 const BlogPost = ({post}) => {
@@ -8,7 +8,7 @@ const BlogPost = ({post}) => {
         <div className="blogPost">
             <div className="postHeader">
                 <img className="profilePicture"
-                     src={require(`../../../../assets/images/ProfilePictures/${post.profilePicture}.png`)} />
+                    src={require(`../../../../assets/images/ProfilePictures/${post.profilePicture}.png`)} />
                 <div>
                     <div className="author">{post.name}</div>
                     <div className="postDateTime">{post.datetime}</div>
@@ -37,7 +37,9 @@ BlogPost.propTypes = {
         likes: PropTypes.number,
         comments: PropTypes.number,
         image: PropTypes.string,
-        title: PropTypes.string
+        title: PropTypes.string,
+        name: PropTypes.string
+
     }),
 };
 

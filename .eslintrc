@@ -124,10 +124,11 @@
     ],
     "keyword-spacing": [
       "error"
-    ]
+    ],
+    "jsx-space-before-closing": "always"
   },
   "plugins": [
     "prefer-arrow"
   ],
-  "jsx-space-before-closing": "always"
+
 }

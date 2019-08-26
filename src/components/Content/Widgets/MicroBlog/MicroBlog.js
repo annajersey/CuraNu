@@ -3,7 +3,6 @@ import "./MicroBlog.scss";
 import Data from "../../../../mockData/micro-blog-data.json";
 import BlogPost from "../BlogPost/BlogPost";
 
-
 const MicroBlog = () => {
     return (
         <div className="microBlog">

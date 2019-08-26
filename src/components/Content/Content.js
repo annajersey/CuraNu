@@ -32,17 +32,15 @@ const Content = () => {
             {/* ---- Widgets list starts ---- */}
 
             <Accordion className="grid-block"
-                       firstActiveItem={1}
-                       singleOpen={true}
-                       setRerenderLayout={setRerenderLayout}/>
+                firstActiveItem={1}
+                singleOpen={true}
+                setRerenderLayout={setRerenderLayout}/>
 
             <Widget type="links" title="Direct Naar" className="grid-block">
                 <Links data={linksData}/>
             </Widget>
 
             <PhoneSearch className="grid-block"/>
-
-            {/* ---- Second Row: ---- */}
 
             <Widget className="grid-block" type="events" title="EVENEMENTEN" showMore="Meer evenementen">
                 <Events/>
@@ -56,8 +54,6 @@ const Content = () => {
                 <MicroBlog/>
             </Widget>
 
-            {/* ---- Third Row: ---- */}
-
             <Widget className="grid-block" type="events" title="NIEUWS" showMore="Meer nieuws">
                 <News/>
             </Widget>
@@ -66,15 +62,12 @@ const Content = () => {
                 <Info data={ManualLinksData}/>
             </Widget>
 
-            {/* ---- Fourth Row: ---- */}
-
-
             <Widget className="grid-block" type="groups" title="MIJN GROEPEN" showMore="Meer groepen">
                 <Groups/>
             </Widget>
 
             <div className="grid-block">
-                <AddWidgetButton/>
+                <AddWidgetButton />
             </div>
 
             <Widget type="info" title="PEILINGEN" className="grid-block">
@@ -82,12 +75,11 @@ const Content = () => {
             </Widget>
 
             <div className="grid-block"></div>
-            <div className="grid-block"></div>
+            <div className="grid-block"></div> {/*added to fix widgets position*/}
 
             <Widget type="links" title="MIJN LINKS" className="grid-block">
                 <Links data={MyLinksData}/>
             </Widget>
-
 
         </Masonry>
     </div>;

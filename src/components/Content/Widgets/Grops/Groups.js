@@ -13,5 +13,4 @@ const Groups = () =>
         )}
     </ul>;
 
-
 export default Groups;
