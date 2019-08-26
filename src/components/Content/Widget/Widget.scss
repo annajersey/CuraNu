@@ -3,16 +3,33 @@
 .widget {
   border: 1px solid $blue;
   min-height: 50px;
+
   .widgetContent {
     font-size: 14px;
     font-family: $open-sans;
-    padding: 5px 0px;
+    padding: 5px 0 10px 0;
   }
 
   .widgetHeader {
     height: 49px;
     display: flex;
     align-items: center;
+  }
+
+  .showMore {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 49px;
+    background: $light-blue;
+    color: $gray-blue;
+    padding-left: 16px;
+
+    .icon {
+      float: right;
+      background: $blue;
+    }
   }
 }
 
@@ -36,6 +53,10 @@
 
   .closeButton {
     background: $light-blue;
+  }
+
+  .hideButton {
+    transform: rotate(90deg);
   }
 
   svg {

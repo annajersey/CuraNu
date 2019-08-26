@@ -33,7 +33,7 @@ const Accordion = (props) => {
         }
     };
 
-    return <div className="widget">
+    return <div className={`widget ${props.className}`}>
         {accordionItems}
     </div>
 }

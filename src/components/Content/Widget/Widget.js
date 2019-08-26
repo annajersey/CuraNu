@@ -1,28 +1,32 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./Widget.scss";
-import HideButton from "./images/arrow-right.svg";
+import Arrow from "../../../assets/images/arrow-right.svg";
 import CloseButton from "./images/close-button.svg";
 
-
-const Widget = ({icon, title, children}) =>
-    <div className="widget">
+const Widget = ({title, className, type, children, showMore}) =>
+    <div className={`widget ${className}`}>
         <div className="widgetHeader">
-            <div className="widgetIcon icon"><img src={icon} /></div>
+            <div className="widgetIcon icon">{type&&<img src={require(`./widgetIcons/${type}.png`)} />}</div>
             <div className="widgetTitle">{title}</div>
             <div className="widgetButtons">
-            <div className="hideButton icon"><HideButton /></div>
+            <div className="hideButton icon"><Arrow /></div>
             <div className="closeButton icon"><CloseButton /></div>
             </div>
         </div>
         <div className="widgetContent">
             {children}
         </div>
+        {showMore &&
+        <a className="showMore" href="#">
+            {showMore}
+            <div className="icon"><Arrow /></div>
+        </a>}
     </div>
 
 
 Widget.propTypes = {
-    icon: PropTypes.string.isRequired,
+    type: PropTypes.string,
     title: PropTypes.string.isRequired
     };
 

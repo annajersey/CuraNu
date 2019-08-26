@@ -1,23 +1,21 @@
 import React from "react";
-import Widget from "../../Widget/Widget";
-import "./Links.scss"
+import "./Events.scss"
 
-const Links = () =>
-
-        <ul className="linksWidget">
+const Events = () =>
+        <ul className="eventsWidget">
             <li>
-                <div><img src={require("./images/yourforce.png")} alt="yourforce"/></div>
-                <span>Youforce</span>
+                <div>10/12/2016</div>
+                <span>Zorgmarathon</span>
             </li>
             <li>
-                <div><img src={require("./images/topdesk.png")} alt="yourforce"/></div>
-                <span>MIP-meldingen</span>
+                <div>12/12/2016</div>
+                <span>Beurs</span>
             </li>
             <li>
-                <div><img src={require("./images/mip.png")} alt="yourforce"/></div>
-                <span>Topdesk</span>
+                <div>30/12/2016</div>
+                <span>Onze zorgevenemen</span>
             </li>
         </ul>
 
 
-export default Links;
+export default Events;

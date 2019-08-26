@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Accordion.scss";
 import "../Widget/Widget.scss";
-import Arrow from "./images/arrow-right.svg"
+import Arrow from "../../../assets/images/arrow-right.svg"
 
 const AccordionItem = (props) =>{
     const content = useRef(null);
