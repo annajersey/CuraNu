@@ -1,15 +1,15 @@
 {
   "accordion": [
     {
-      "title": "test",
+      "title": "ACCORDION 1",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
-      "title": "test",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labo Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididu Lorem ip Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "title": "ACCORDION 2",
+      "content": "Sed non urna. Donec et ante. Phasellus eu ligula.\nVestibulum sit amet purus. Vivamus hendrerit,\ndolor at aliquet laoreet, mauris turpis porttito Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labo Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididu Lorem ip Lorem"
     },
     {
-      "title": "test",
+      "title": "ACCORDION 3",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }
   ]

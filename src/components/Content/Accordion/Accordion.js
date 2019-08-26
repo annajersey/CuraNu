@@ -4,21 +4,35 @@ import "../Widget/Widget.scss";
 import accordionData from "../../../mockData/accordion-data";
 
 const Accordion = (props) => {
-    const [activeIndex, setActiveIndex] = useState(1);
+    const [activeIndexes, setActiveIndexes] = useState([props.firstActiveItem]);
+    const isItemActive = index => (activeIndexes.indexOf(index) >= 0);
     const accordionItems = accordionData.accordion.map(
         (item, index) => <AccordionItem
-            key={index+1}
+            key={index + 1}
             title={item.title}
             content={item.content}
-            active={(index+1) === activeIndex}
-            setActiveIndex = {() => toggleActive(index+1)}
+            active={isItemActive(index+1)}
+            setActiveIndex={() => toggleActive(index + 1)}
         />);
-useEffect(() => { setTimeout(()=>props.setRenderLayout(Math.random()), 400)},[activeIndex])
-    const toggleActive = (key) => {
-        setActiveIndex(activeIndex===key ? 0 : key)
 
 
-    }
+    useEffect(() => {
+        setTimeout(() => props.setRerenderLayout(Math.random()), 400)
+    }, [activeIndexes]);
+
+    const toggleActive = (key) =>{
+        const selected = isItemActive(key);
+        if(props.singleOpen){
+            setActiveIndexes(selected ? [] : [key])
+        }else{
+            if(selected) {
+                setActiveIndexes(activeIndexes.filter(i => i !== key))
+            }else{
+                setActiveIndexes([...activeIndexes].concat([key]))
+            }
+        }
+    };
+
     return <div className="widget">
         {accordionItems}
     </div>

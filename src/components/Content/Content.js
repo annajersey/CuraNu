@@ -6,7 +6,7 @@ import Links from "./Widgets/Links/Links";
 import Accordion from "./Accordion/Accordion";
 
 const Content = () => {
-    const [renderLayout, setRenderLayout] = useState(1);
+    const [rerender, setRerenderLayout] = useState(1);
    return  <div className="content container">
         <Masonry
             options={{horizontalOrder: true,  columnWidth: '.grid-sizer', gutter: '.gutter-sizer',
@@ -16,7 +16,10 @@ const Content = () => {
             <div className="grid-sizer"></div>
             <div className="gutter-sizer"></div>
             <div className="grid-block">
-                <Accordion setRenderLayout={setRenderLayout}/>
+                <Accordion
+                    firstActiveItem={1}
+                    singleOpen={true}
+                    setRerenderLayout={setRerenderLayout}/>
             </div>
             <div className="grid-block">
                 <Widget icon={require("./Widgets/widgetIcons/external-link.png")} title="Direct Naar">
