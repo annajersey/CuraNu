@@ -1,0 +1,10 @@
+@import "../../../../assets/variables";
+
+.pollsWidget {
+  padding: 0px 27px 0px 27px;
+  .noPolls{
+    height: 112px;
+    display: flex;
+    align-items: center;
+  }
+}

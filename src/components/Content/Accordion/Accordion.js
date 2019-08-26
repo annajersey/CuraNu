@@ -40,7 +40,7 @@ const Accordion = (props) => {
 
 Accordion.propTypes = {
     singleOpen: PropTypes.bool,
-    setRerenderLayout: PropTypes.number,
+    setRerenderLayout: PropTypes.func,
     firstActiveItem: PropTypes.number,
     className: PropTypes.string
 };

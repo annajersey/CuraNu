@@ -8,6 +8,9 @@ import Events from "./Widgets/Events/Events";
 import News from "./Widgets/News/News";
 import linksData from "../../mockData/links-data.json";
 import linksData2 from "../../mockData/links2-data.json";
+import linksManualData from "../../mockData/manual-links-data.json";
+import Info from "./Widgets/Info/Info";
+import Polls from "./Widgets/Polls/Polls";
 
 const Content = () => {
     const [rerender, setRerenderLayout] = useState(1);
@@ -20,6 +23,8 @@ const Content = () => {
             <div className="grid-sizer"></div>
             <div className="gutter-sizer"></div>
 
+            /*---- Widgets list starts ----*/
+
             <Accordion className="grid-block"
                 firstActiveItem={1}
                 singleOpen={true}
@@ -28,8 +33,14 @@ const Content = () => {
             <Widget type="links" title="Direct Naar" className="grid-block">
                 <Links data={linksData}/>
             </Widget>
+            <Widget type="info" title="PEILINGEN" className="grid-block">
+                <Polls />
+            </Widget>
             <Widget type="links" title="MIJN LINKS" className="grid-block">
                 <Links data={linksData2}/>
+            </Widget>
+            <Widget type="info" title="KWALITEITSHANDBOEK" className="grid-block" showMore="Naar kwaliteitshandboek">
+                <Info data={linksManualData}/>
             </Widget>
             <Widget className="grid-block" type="events" title="EVENEMENTEN" showMore="Meer evenementen">
                 <Events />

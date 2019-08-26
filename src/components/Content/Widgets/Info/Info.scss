@@ -1,23 +1,24 @@
 @import "../../../../assets/variables";
 
-.linksWidget {
+.infoWidget {
   padding: 0px 27px 0px 27px;
 
   li {
     border-bottom: 1px solid $blue;
-    height: 73px;
+    height: 90px;
     display: flex;
     align-items: center;
     font-family: $open-sans-bold;
     color: $gray-blue;
-    &:last-child{
+
+    &:last-child {
       border: 0;
     }
-    .linkImage {
-      width: 83px;
-      text-align: center;
-      margin-right: 42px;
+
+    .dateUpdated {
+      font-size: 14px;
+      font-family: $open-sans-light;
+      font-style: italic;
     }
   }
-
 }

@@ -2,12 +2,13 @@
 
 .widget {
   border: 1px solid $blue;
-  min-height: 50px;
+
 
   .widgetContent {
     font-size: 14px;
     font-family: $open-sans;
     padding: 5px 0 10px 0;
+    min-height: 112px;
   }
 
   .widgetHeader {
@@ -30,6 +31,10 @@
       float: right;
       background: $blue;
     }
+  }
+  .icon{
+    flex-basis: 49px;
+    flex-shrink: 0;
   }
 }
 
@@ -57,6 +62,7 @@
 
   .hideButton {
     transform: rotate(90deg);
+    flex-basis: 45px;
   }
 
   svg {
