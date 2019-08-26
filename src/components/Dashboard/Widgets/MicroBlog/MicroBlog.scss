@@ -23,21 +23,6 @@
     justify-content: space-between;
   }
 
-  .Send {
-    float: right;
-    width: 106px;
-    height: 33px;
-    line-height: 33px;
-    background: $aqua-blue;
-    text-align: center;
-    border: 0;
-    padding: 0;
-    color: $white;
-    font-family: $open-sans-bold;
-    font-size: 15px;
-    cursor: pointer;
-  }
-
   .addButtons {
     button {
       width: 23px;

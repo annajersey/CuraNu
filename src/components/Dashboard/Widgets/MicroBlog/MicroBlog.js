@@ -13,7 +13,7 @@ const MicroBlog = () => {
                         <button className="AddImageButton" onClick={e => e.preventDefault()}></button>
                         <button className="AddLinkButton" onClick={e => e.preventDefault()}></button>
                     </div>
-                    <button className="Send" onClick={e => e.preventDefault()}>Plaats</button>
+                    <button className="blueButton" onClick={e => e.preventDefault()}>Plaats</button>
                 </div>
             </form>
             <BlogPost post = {Data.post}/>

@@ -1,0 +1,64 @@
+@import "../../assets/variables";
+
+.contactPage {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+
+  .sidebar {
+    flex-basis: 30%;
+    margin-left: -30px;
+  }
+
+  .contactForm {
+    flex-basis: 65%;
+  }
+
+  form {
+    margin-top: 50px;
+
+    div {
+      display: flex;
+      width: 100%;
+      min-height: 60px;
+      align-items: flex-start;
+
+      input {
+        width: 300px;
+        height: 35px;
+        border:1px solid $gray-blue;
+        border-radius: 15px;
+        padding: 0 15px;
+      }
+
+      label {
+        width: 150px;
+        font-family: $open-sans-bold;
+      }
+    }
+
+
+    input[type=submit] {
+      margin-top: 20px;
+      height: 35px;
+      border-radius: 15px;
+      width: 150px;
+    }
+
+
+    textarea {
+      width: calc(100% - 150px);
+      border:1px solid $gray-blue;
+      border-radius: 15px;
+      padding:15px 20px;
+    }
+
+    input[type=text], input[type=email], textarea{
+      outline: none;
+      color:$gray-blue;
+      font-family: $open-sans;
+      font-size: 14px;
+    }
+  }
+}
+
