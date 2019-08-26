@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Masonry from "react-masonry-component";
 import Widget from "./Widget/Widget";
-import "./Content.scss";
+import "./Dashboard.scss";
 import Links from "./Widgets/Links/Links";
 import Accordion from "./Accordion/Accordion";
 import Events from "./Widgets/Events/Events";
@@ -18,7 +18,7 @@ import MicroBlog from "./Widgets/MicroBlog/MicroBlog";
 import Blogs from "./Widgets/Blogs/Blogs";
 import AddWidgetButton from "./Widgets/AddWidgetButton/AddWidgetButton";
 
-const Content = () => {
+const Dashboard = () => {
     const [rerender, setRerenderLayout] = useState(1);
     return <div className="content container">
         <Masonry options={{
@@ -85,4 +85,4 @@ const Content = () => {
     </div>;
 };
 
-export default Content;
+export default Dashboard;

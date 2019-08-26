@@ -14,6 +14,12 @@ module.exports = merge(baseConfig, {
             new MinifyPlugin(),
             new OptimizeCSSAssetsPlugin({})
         ]
-    }
+    }, plugins: [
+        new webpack.DefinePlugin({
+            basePath: JSON.stringify(basePath),
+            baseUrl: JSON.stringify("http://localhost:8080"),
+            salt: "abc"
+        }),
+    ]
 });
 

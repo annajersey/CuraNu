@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.scss";
 import BellIcon from "./images/bell.svg";
 import SettingsIcon from "./images/settings.svg";
+import {NavLink} from "react-router-dom";
 
 const Header = () =>
     <header>
@@ -9,7 +10,7 @@ const Header = () =>
             <nav>
                 <ul>
                     <li><a href="#">Groepen</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><NavLink to="/contact">Contact</NavLink></li>
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">Smoelenboek</a></li>
                     <li><a href="#">Microblog</a></li>

@@ -1,15 +1,23 @@
 import React from "react";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Header from "./components/Header/Header";
 import MainMenu from "./components/MainMenu/MainMenu";
-import Content from "./components/Content/Content";
+import Dashboard from "./components/Dashboard/Dashboard";
 import "./assets/styles.scss";
 import "./assets/images/favicon5.ico";
+import ContactForm from "./components/ContactForm/ContactForm";
+
 
 const App = () =>
+    <BrowserRouter>
     <main>
         <Header />
         <MainMenu />
-        <Content />
-    </main>;
+        <Switch>
+            <Route path="/" exact component={Dashboard} />
+            <Route path="/contact" component={ContactForm} />
+        </Switch>
+    </main>
+    </BrowserRouter>
 
 export default App;
