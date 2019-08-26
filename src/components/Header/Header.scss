@@ -5,14 +5,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #EBF0F4;
-    height: 65px;
+    border-bottom: 1px solid $light-blue;
+    height: 68px;
   }
 
   ul {
-    color: $default;
-    font-size: 14px;
     margin: 0;
+    padding-left: 18px;
+
+    a {
+      color: $gray-blue;
+      font-size: 14px;
+    }
 
     li {
       display: inline-block;
@@ -48,6 +52,7 @@ header {
 
   .logo {
     display: flex;
+    align-items: flex-end;
     font-family: $open-sans-bold;
     font-size: 22px;
     padding-top: 15px;
@@ -55,15 +60,12 @@ header {
     color: #000;
 
     .logoTitle {
-      padding-top: 7px;
       margin-left: 10px;
-      line-height: 23px;
-
     }
 
     .subtitle {
-      padding-top: 22px;
-      margin-left: 25px;
+      margin-left: 26px;
+      line-height: 24px;
     }
 
     .logoSubtitle {
