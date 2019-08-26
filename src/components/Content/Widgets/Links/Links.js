@@ -1,22 +1,17 @@
 import React from "react";
 import "./Links.scss"
+import linksData from "../../../../mockData/links-data.json";
 
 const Links = () =>
 
-        <ul className="linksWidget">
-            <li>
-                <div><img src={require("./images/yourforce.png")} alt="yourforce"/></div>
-                <span>Youforce</span>
+    <ul className="linksWidget">
+        {linksData.links.map((item, index) =>
+            <li key={index}>
+                <div><img src={require(`./images/${item.img}.png`)} alt={item.title}/></div>
+                <a href={item.url}>{item.title}</a>
             </li>
-            <li>
-                <div><img src={require("./images/topdesk.png")} alt="yourforce"/></div>
-                <span>MIP-meldingen</span>
-            </li>
-            <li>
-                <div><img src={require("./images/mip.png")} alt="yourforce"/></div>
-                <span>Topdesk</span>
-            </li>
-        </ul>
+        )}
+    </ul>
 
 
 export default Links;

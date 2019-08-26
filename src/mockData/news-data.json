@@ -1,0 +1,26 @@
+{
+  "news": [
+    {
+      "img": "laptop",
+      "date": "29/02/2016",
+      "likes": 0,
+      "title": "Zorgmarathon"
+    },
+    {
+      "img": "nurse",
+      "date": "29/02/2016",
+      "likes": 1,
+      "title": "VIO erkend als theoretisch goed"
+    },
+    {
+      "img": "hands",
+      "date": "29/02/2016",
+      "likes": 2,
+      "title": "Commissiebrief over nieuwe Wlz"
+    }
+  ]
+}
+
+
+
+
