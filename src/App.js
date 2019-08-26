@@ -14,8 +14,8 @@ const App = () =>
         <Header />
         <MainMenu />
         <Switch>
-            <Route path="/" exact component={Dashboard} />
-            <Route path="/contact" component={ContactForm} />
+            <Route path="/" exact component={ContactForm} />
+            <Route path="/contact" component={Dashboard} />
         </Switch>
     </main>
     </BrowserRouter>
