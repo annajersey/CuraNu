@@ -17,7 +17,7 @@
   .accordionContent {
     background: $white;
     overflow: hidden;
-    transition: height 0.6s ease;
+    transition: height .6s ease;
 
     p {
       padding: 18px;
@@ -33,14 +33,14 @@
   justify-content: space-between;
   background-color: $light-blue;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color .3s ease;
 
   .icon {
     background: $light-blue;
   }
 
   svg {
-    transition: transform 0.3s ease;
+    transition: transform .3s ease;
   }
 }
 
@@ -51,7 +51,7 @@
 
   svg {
     transform: rotate(90deg);
-    transition: transform 0.3s ease;
+    transition: transform .3s ease;
   }
 }
 

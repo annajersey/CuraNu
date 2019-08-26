@@ -1,4 +1,14 @@
 {
+  "ignoreFiles": [
+    "**/*.png",
+    "**/*.woff",
+    "**/*.woff2",
+    "**/*.ttf",
+    "**/*.otf",
+    "**/*.eot",
+    "**/*.js",
+    "**/*.json"
+  ],
   "rules": {
     "block-no-empty": true,
     "color-no-invalid-hex": true,
@@ -6,7 +16,6 @@
     "indentation": 2,
     "max-empty-lines": 1,
     "max-nesting-depth": 3,
-    "block-closing-brace-empty-line-before": "never",
     "declaration-block-trailing-semicolon": "always",
     "number-leading-zero": "never",
     "declaration-colon-newline-after": null,
@@ -18,12 +27,12 @@
     "at-rule-no-unknown": null,
     "no-descending-specificity": null,
     "color-hex-length": "short",
-    "block-opening-brace-space-before": "always",
     "selector-pseudo-element-colon-notation": null,
     "declaration-empty-line-before": "never",
     "length-zero-no-unit": true,
     "at-rule-empty-line-before": "always",
     "font-family-no-missing-generic-family-keyword": true,
-    "string-quotes" : "double"
+    "string-quotes": "double",
+    "block-closing-brace-empty-line-before": "never"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "post": [
+  "post":
     {
       "profilePicture": "lady",
       "url": "/#",
@@ -9,7 +9,7 @@
       "likes": 0,
       "image": "people"
     }
-  ]
+
 }
 
 

@@ -1,0 +1,45 @@
+@import "../../../../assets/variables";
+
+.blogPost {
+
+  .postHeader {
+    display: flex;
+    align-items: center;
+
+    .profilePicture {
+      margin-right: 15px;
+    }
+
+    .author {
+      font-family: $open-sans-bold;
+    }
+
+    .likes {
+      margin-left: auto;
+    }
+  }
+
+  .postContent {
+    margin-top: 25px;
+
+    img {
+      display: block;
+      margin: 30px 0 20px 0;
+    }
+
+    .postLink {
+      font-family: $open-sans-bold;
+    }
+  }
+
+  .comments {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: $default;
+    margin-left: 7px;
+    img {
+      margin-right: 2px;
+    }
+  }
+}

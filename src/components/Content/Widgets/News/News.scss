@@ -1,7 +1,7 @@
 @import "../../../../assets/variables";
 
 .newsWidget {
-  padding: 0px 23px 0px 23px;
+  padding: 0 23px 0 23px;
 
   div.newsItem {
     border-bottom: 1px solid $blue;
@@ -37,5 +37,4 @@
       padding-bottom: 13px;
     }
   }
-
 }

@@ -9,11 +9,14 @@ import News from "./Widgets/News/News";
 import linksData from "../../mockData/links-data.json";
 import MyLinksData from "../../mockData/own-links-data.json";
 import ManualLinksData from "../../mockData/manual-links-data.json";
+import BlogPostData from "../../mockData/blog-post-data";
 import Info from "./Widgets/Info/Info";
 import Polls from "./Widgets/Polls/Polls";
 import Groups from "./Widgets/Grops/Groups";
 import PhoneSearch from "./PhoneSearch/PhoneSearch";
 import MicroBlog from "./Widgets/MicroBlog/MicroBlog";
+import BlogPost from "./Widgets/BlogPost/BlogPost";
+import Blogs from "./Widgets/Blogs/Blogs";
 
 const Content = () => {
     const [rerender, setRerenderLayout] = useState(1);
@@ -43,6 +46,9 @@ const Content = () => {
 
             <Widget type="info" title="PEILINGEN" className="grid-block">
                 <Polls/>
+            </Widget>
+            <Widget type="blog" title="BLOGS" className="grid-block" showMore="Meer blogs">
+                <Blogs posts={BlogPostData.posts} />
             </Widget>
             <Widget type="links" title="MIJN LINKS" className="grid-block">
                 <Links data={MyLinksData}/>
