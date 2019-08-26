@@ -41,13 +41,26 @@ module.exports = {
                     {
                         loader: "url-loader",
                         options: {
-                            name: "img/[name].[ext]"
+                            name: "img/[name].[ext]",
+                            limit: 100
                         }
                     },
                     {
                         loader: "img-loader",
                         options: {
                             name: "img/[name].[ext]",
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(ico)/i,
+                use: [
+                    {
+                        loader: "url-loader",
+                        options: {
+                            name: "img/[name].[ext]",
+                            limit: 1
                         }
                     }
                 ]
