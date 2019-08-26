@@ -10,8 +10,8 @@ const Widget = ({title, className, type, children, showMore}) =>
             <div className="widgetIcon icon">{type&&<img src={require(`./widgetIcons/${type}.png`)} />}</div>
             <div className="widgetTitle">{title}</div>
             <div className="widgetButtons">
-            <div className="hideButton icon"><Arrow /></div>
-            <div className="closeButton icon"><CloseButton /></div>
+                <div className="hideButton icon"><Arrow /></div>
+                <div className="closeButton icon"><CloseButton /></div>
             </div>
         </div>
         <div className="widgetContent">
@@ -22,12 +22,11 @@ const Widget = ({title, className, type, children, showMore}) =>
             {showMore}
             <div className="icon"><Arrow /></div>
         </a>}
-    </div>
-
+    </div>;
 
 Widget.propTypes = {
     type: PropTypes.string,
     title: PropTypes.string.isRequired
-    };
+};
 
 export default Widget;

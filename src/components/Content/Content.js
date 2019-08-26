@@ -1,30 +1,35 @@
 import React, {useState} from "react";
 import Masonry from "react-masonry-component";
 import Widget from "./Widget/Widget";
-import "./Content.scss"
+import "./Content.scss";
 import Links from "./Widgets/Links/Links";
 import Accordion from "./Accordion/Accordion";
 import Events from "./Widgets/Events/Events";
 import News from "./Widgets/News/News";
+import linksData from "../../mockData/links-data.json";
+import linksData2 from "../../mockData/links2-data.json";
 
 const Content = () => {
     const [rerender, setRerenderLayout] = useState(1);
     return <div className="content container">
         <Masonry options={{
-                horizontalOrder: true, columnWidth: '.grid-sizer', gutter: '.gutter-sizer',
-                itemSelector: '.grid-block',
-                percentPosition: true
-            }}>
+            horizontalOrder: true, columnWidth: ".grid-sizer", gutter: ".gutter-sizer",
+            itemSelector: ".grid-block",
+            percentPosition: true
+        }}>
             <div className="grid-sizer"></div>
             <div className="gutter-sizer"></div>
 
             <Accordion className="grid-block"
-                       firstActiveItem={1}
-                       singleOpen={true}
-                       setRerenderLayout={setRerenderLayout}/>
+                firstActiveItem={1}
+                singleOpen={true}
+                setRerenderLayout={setRerenderLayout}/>
 
             <Widget type="links" title="Direct Naar" className="grid-block">
-                <Links/>
+                <Links data={linksData}/>
+            </Widget>
+            <Widget type="links" title="MIJN LINKS" className="grid-block">
+                <Links data={linksData2}/>
             </Widget>
             <Widget className="grid-block" type="events" title="EVENEMENTEN" showMore="Meer evenementen">
                 <Events />
@@ -33,8 +38,7 @@ const Content = () => {
                 <News />
             </Widget>
         </Masonry>
-    </div>
-}
-
+    </div>;
+};
 
 export default Content;

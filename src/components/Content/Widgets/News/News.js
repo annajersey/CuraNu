@@ -1,5 +1,5 @@
 import React from "react";
-import "./News.scss"
+import "./News.scss";
 import newsData from "../../../../mockData/news-data.json";
 
 const News = () =>
@@ -17,6 +17,5 @@ const News = () =>
             </div>
         )}
     </div>;
-
 
 export default News;

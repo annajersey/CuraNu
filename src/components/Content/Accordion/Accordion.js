@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import PropTypes from "prop-types";
 import AccordionItem from "./AccordionItem";
 import "../Widget/Widget.scss";
 import accordionData from "../../../mockData/accordion-data";
@@ -15,27 +16,33 @@ const Accordion = (props) => {
             setActiveIndex={() => toggleActive(index + 1)}
         />);
 
-
     useEffect(() => {
-        setTimeout(() => props.setRerenderLayout(Math.random()), 400)
+        setTimeout(() => props.setRerenderLayout(Math.random()), 400);
     }, [activeIndexes]);
 
     const toggleActive = (key) =>{
         const selected = isItemActive(key);
-        if(props.singleOpen){
-            setActiveIndexes(selected ? [] : [key])
-        }else{
-            if(selected) {
-                setActiveIndexes(activeIndexes.filter(i => i !== key))
-            }else{
-                setActiveIndexes([...activeIndexes].concat([key]))
+        if (props.singleOpen){
+            setActiveIndexes(selected ? [] : [key]);
+        } else {
+            if (selected) {
+                setActiveIndexes(activeIndexes.filter(i => i !== key));
+            } else {
+                setActiveIndexes([...activeIndexes].concat([key]));
             }
         }
     };
 
     return <div className={`widget ${props.className}`}>
         {accordionItems}
-    </div>
-}
+    </div>;
+};
+
+Accordion.propTypes = {
+    singleOpen: PropTypes.bool,
+    setRerenderLayout: PropTypes.number,
+    firstActiveItem: PropTypes.number,
+    className: PropTypes.string
+};
 
 export default Accordion;
