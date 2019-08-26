@@ -32,43 +32,63 @@ const Content = () => {
             {/* ---- Widgets list starts ---- */}
 
             <Accordion className="grid-block"
-                firstActiveItem={1}
-                singleOpen={true}
-                setRerenderLayout={setRerenderLayout}/>
+                       firstActiveItem={1}
+                       singleOpen={true}
+                       setRerenderLayout={setRerenderLayout}/>
 
             <Widget type="links" title="Direct Naar" className="grid-block">
                 <Links data={linksData}/>
             </Widget>
-            <Widget type="blog" title="MICROBLOG" className="grid-block" showMore="Toon meer">
-                <MicroBlog/>
-            </Widget>
+
             <PhoneSearch className="grid-block"/>
 
-            <Widget type="info" title="PEILINGEN" className="grid-block">
-                <Polls/>
-            </Widget>
-            <Widget type="blog" title="BLOGS" className="grid-block" showMore="Meer blogs">
-                <Blogs posts={BlogPostData.posts} />
-            </Widget>
-            <Widget type="links" title="MIJN LINKS" className="grid-block">
-                <Links data={MyLinksData}/>
-            </Widget>
-            <Widget type="info" title="KWALITEITSHANDBOEK" className="grid-block" showMore="Naar kwaliteitshandboek">
-                <Info data={ManualLinksData}/>
-            </Widget>
+            {/* ---- Second Row: ---- */}
 
             <Widget className="grid-block" type="events" title="EVENEMENTEN" showMore="Meer evenementen">
                 <Events/>
             </Widget>
+
+            <Widget type="blog" title="BLOGS" className="grid-block" showMore="Meer blogs">
+                <Blogs posts={BlogPostData.posts}/>
+            </Widget>
+
+            <Widget type="blog" title="MICROBLOG" className="grid-block" showMore="Toon meer">
+                <MicroBlog/>
+            </Widget>
+
+            {/* ---- Third Row: ---- */}
+
             <Widget className="grid-block" type="events" title="NIEUWS" showMore="Meer nieuws">
                 <News/>
             </Widget>
+
+            <Widget type="info" title="KWALITEITSHANDBOEK" className="grid-block" showMore="Naar kwaliteitshandboek">
+                <Info data={ManualLinksData}/>
+            </Widget>
+
+            {/* ---- Fourth Row: ---- */}
+
+
             <Widget className="grid-block" type="groups" title="MIJN GROEPEN" showMore="Meer groepen">
                 <Groups/>
             </Widget>
+
             <div className="grid-block">
-            <AddWidgetButton  />
+                <AddWidgetButton/>
             </div>
+
+            <Widget type="info" title="PEILINGEN" className="grid-block">
+                <Polls/>
+            </Widget>
+
+            <div className="grid-block"></div>
+            <div className="grid-block"></div>
+
+            <Widget type="links" title="MIJN LINKS" className="grid-block">
+                <Links data={MyLinksData}/>
+            </Widget>
+
+
         </Masonry>
     </div>;
 };
