@@ -42,7 +42,7 @@ module.exports = {
                         loader: "url-loader",
                         options: {
                             name: "img/[name].[ext]",
-                            limit: 100
+                            limit: 1000
                         }
                     },
                     {
@@ -75,6 +75,24 @@ module.exports = {
                     {
                         loader: "react-svg-loader",
                         options: {
+                            svgo: {
+                                plugins: [
+                                    {
+                                        removeTitle: true,
+                                    },
+                                    {
+                                        cleanupIDs: {
+                                            prefix: {
+                                                toString() {
+                                                    this.counter = this.counter || 0;
+                                                    return `id-${this.counter++}`;
+                                                }
+                                            }
+                                        }
+                                    },
+                                ],
+                                floatPrecision: 3,
+                            },
                             jsx: true
                         }
                     }
