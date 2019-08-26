@@ -6,7 +6,7 @@ import BlogPost from "../BlogPost/BlogPost";
 const Blogs = ({posts}) => {
     return (
         <div className="blogsWidget">
-            {posts.map(post => <BlogPost post={post} />)}
+            {posts.map((post, index) => <BlogPost key={index} post={post} />)}
         </div>
     );
 };

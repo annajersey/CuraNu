@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Widget.scss";
 import Arrow from "../../../assets/images/arrow-right.svg";
-import CloseButton from "./images/close-button.svg";
+import CloseButton from "../../../assets/images/close-button.svg";
 
 const Widget = ({title, className, type, children, showMore}) =>
     <div className={`widget ${className}`}>

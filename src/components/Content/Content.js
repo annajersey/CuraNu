@@ -15,8 +15,8 @@ import Polls from "./Widgets/Polls/Polls";
 import Groups from "./Widgets/Grops/Groups";
 import PhoneSearch from "./PhoneSearch/PhoneSearch";
 import MicroBlog from "./Widgets/MicroBlog/MicroBlog";
-import BlogPost from "./Widgets/BlogPost/BlogPost";
 import Blogs from "./Widgets/Blogs/Blogs";
+import AddWidgetButton from "./Widgets/AddWidgetButton/AddWidgetButton";
 
 const Content = () => {
     const [rerender, setRerenderLayout] = useState(1);
@@ -56,6 +56,7 @@ const Content = () => {
             <Widget type="info" title="KWALITEITSHANDBOEK" className="grid-block" showMore="Naar kwaliteitshandboek">
                 <Info data={ManualLinksData}/>
             </Widget>
+
             <Widget className="grid-block" type="events" title="EVENEMENTEN" showMore="Meer evenementen">
                 <Events/>
             </Widget>
@@ -65,6 +66,9 @@ const Content = () => {
             <Widget className="grid-block" type="groups" title="MIJN GROEPEN" showMore="Meer groepen">
                 <Groups/>
             </Widget>
+            <div className="grid-block">
+            <AddWidgetButton  />
+            </div>
         </Masonry>
     </div>;
 };
