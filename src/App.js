@@ -10,14 +10,12 @@ import ContactForm from "./components/ContactForm/ContactForm";
 
 const App = () =>
     <BrowserRouter>
-    <main>
         <Header />
         <MainMenu />
         <Switch>
-            <Route path="/" exact component={ContactForm} />
-            <Route path="/contact" component={Dashboard} />
+            <Route path="/" exact component={Dashboard} />
+            <Route path="/contact" component={ContactForm} />
         </Switch>
-    </main>
     </BrowserRouter>
 
 export default App;
