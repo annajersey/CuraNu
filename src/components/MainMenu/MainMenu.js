@@ -18,4 +18,5 @@ const MainMenu = () =>
             </form>
         </div>
     </div>;
+
 export default MainMenu;

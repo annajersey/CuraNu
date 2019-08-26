@@ -1,0 +1,45 @@
+@import "../../../assets/variables";
+
+.phoneSearch {
+  height: 177px;
+  background: #00C4E6 url("./images/telephone.png") no-repeat center right;
+  padding: 11px 40px 11px 18px;
+  color: $white;
+  line-height: 36px;
+  font-family: $open-sans-bold;
+
+  .phoneSearchTitle {
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  .phoneSearchDescription {
+    font-size: 12px;
+  }
+
+  .searchPhone {
+    display: flex;
+    margin-top: 11px;
+
+    input {
+      flex-basis: calc(100% - 44px);
+      height: 40px;
+      border: none;
+      color: $default;
+      font-size: 15px;
+      outline: none;
+      padding: 0 15px;
+    }
+
+    button {
+      margin-right: auto;
+      background: $white url("../../../assets/images/search.png") no-repeat center center;
+      flex-basis: 44px;
+      padding: 0;
+      height: 40px;
+      border: 0;
+      cursor: pointer;
+    }
+
+  }
+}

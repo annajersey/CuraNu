@@ -12,6 +12,7 @@ import ManualLinksData from "../../mockData/manual-links-data.json";
 import Info from "./Widgets/Info/Info";
 import Polls from "./Widgets/Polls/Polls";
 import Groups from "./Widgets/Grops/Groups";
+import PhoneSearch from "./PhoneSearch/PhoneSearch";
 
 const Content = () => {
     const [rerender, setRerenderLayout] = useState(1);
@@ -34,6 +35,7 @@ const Content = () => {
             <Widget type="links" title="Direct Naar" className="grid-block">
                 <Links data={linksData}/>
             </Widget>
+            <PhoneSearch className="grid-block" />
             <Widget type="info" title="PEILINGEN" className="grid-block">
                 <Polls />
             </Widget>
