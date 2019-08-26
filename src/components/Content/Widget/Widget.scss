@@ -11,12 +11,6 @@
     min-height: 112px;
   }
 
-  .widgetHeader {
-    height: 49px;
-    display: flex;
-    align-items: center;
-  }
-
   .showMore {
     display: flex;
     justify-content: space-between;
@@ -32,29 +26,36 @@
       background: $blue;
     }
   }
-  .icon{
-    flex-basis: 49px;
-    flex-shrink: 0;
+}
+
+.widgetHeader {
+  height: 49px;
+
+  .widgetIcon {
+    float: left;
+    background: $light-blue;
   }
 }
 
 .widgetTitle {
+  float: left;
   color: $orange;
   font-size: 18px;
   font-family: $open-sans-bold;
   text-transform: uppercase;
   padding-left: 17px;
+  line-height: 49px;
+  @media (max-width: 1370px) {
+    font-size: 17px;
+  }
 }
-
-.widgetIcon {
-  background: $light-blue;
-}
-
 
 .widgetButtons {
   display: flex;
   margin-left: auto;
-
+  float: right;
+  justify-content: flex-end;
+  cursor: pointer;
 
   .closeButton {
     background: $light-blue;

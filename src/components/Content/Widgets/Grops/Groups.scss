@@ -1,0 +1,22 @@
+@import "../../../../assets/variables";
+
+.groupsWidget {
+  padding: 0px 27px 0px 27px;
+
+  li {
+    border-bottom: 1px solid $blue;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    font-family: $open-sans-bold;
+    color: $gray-blue;
+    &:last-child{
+      border: 0;
+    }
+    .linkImage {
+      text-align: center;
+      margin-right: 30px;
+    }
+  }
+
+}
