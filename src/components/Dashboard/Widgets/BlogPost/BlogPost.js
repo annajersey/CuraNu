@@ -14,10 +14,10 @@ const BlogPost = ({post}) => {
                     <div className="postDateTime">{post.datetime}</div>
                 </div>
                 <Likes likes={post.likes}/>
-                <div className="comments">
+                {post.comments && <div className="comments">
                     <img src={require("./images/comments.png")} alt="comments"/>
                     {post.comments}
-                </div>
+                </div>}
             </div>
             <div className="postContent">
                 {post.content}
@@ -34,8 +34,8 @@ BlogPost.propTypes = {
         content: PropTypes.string.isRequired,
         url: PropTypes.string,
         datetime: PropTypes.string.isRequired,
-        likes: PropTypes.number,
-        comments: PropTypes.number,
+        likes: PropTypes.string,
+        comments: PropTypes.string,
         image: PropTypes.string,
         title: PropTypes.string,
         name: PropTypes.string
