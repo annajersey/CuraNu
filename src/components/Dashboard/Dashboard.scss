@@ -6,10 +6,16 @@
 
 .grid-sizer {
   width: calc(33.33% - 13px);
+  @media (max-width : 1180px){
+    width: calc(48.5% - 13px);
+  }
 }
 
 .grid-block {
   width: calc(33.33% - 13px);
+  @media (max-width : 1180px){
+    width: calc(48.5% - 13px);
+  }
   background: $white;
   margin-top: 20px;
 }
