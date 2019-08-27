@@ -6,14 +6,14 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import "./assets/styles.scss";
 import "./assets/images/favicon.ico";
 import ContactForm from "./components/ContactForm/ContactForm";
-
+console.log(basePath);
 const App = () =>
     <BrowserRouter basename={basePath}>
         <div>
             <Header/>
             <MainMenu/>
             <Switch>
-                <Route path="/" exact={true} component={Dashboard}/>
+                <Route path="/" exact component={Dashboard}/>
                 <Route path="/contact" component={ContactForm}/>
                 <Route path="*" component={Dashboard} />
             </Switch>
