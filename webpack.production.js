@@ -4,7 +4,7 @@ const webpack = require("webpack");
 const baseConfig = require("./webpack.common.js");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const MinifyPlugin = require("babel-minify-webpack-plugin");
-const basePath = "/assignment";
+const basePath = "/assignment/";
 module.exports = merge(baseConfig, {
     output: {
         publicPath: basePath

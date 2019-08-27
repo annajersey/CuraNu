@@ -29,10 +29,11 @@
       font-size: 15px;
       outline: none;
       padding: 0 15px;
+      margin: 0;
     }
 
     button {
-      margin-right: auto;
+      margin: 0;
       background: $white url("../../../assets/images/search.png") no-repeat center center;
       flex-basis: 44px;
       padding: 0;

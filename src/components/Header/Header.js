@@ -23,8 +23,8 @@ const Header = () =>
             </div>
         </div>
         <div className="container logo">
-            <div><a href="#"><img src={require("./images/logo.png")}/></a></div>
-            <div className="logoTitle">Cura<span>Nu</span><div className="logoSubtitle">Zorg en welzijn</div></div>
+            <div><Link to="/"><img src={require("./images/logo.png")}/></Link></div>
+            <div className="logoTitle"><Link to="/">Cura<span>Nu</span><div className="logoSubtitle">Zorg en welzijn</div></Link></div>
             <div className="subtitle">Intranet</div>
         </div>
     </header>;
