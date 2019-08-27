@@ -6,5 +6,9 @@ const basePath = "/";
 module.exports = merge(baseConfig, {
     output: {
         publicPath: basePath
-    }
+    }, plugins: [
+        new webpack.DefinePlugin({
+            basePath: JSON.stringify(basePath)
+        }),
+    ]
 });

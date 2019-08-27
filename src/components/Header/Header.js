@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.scss";
-import {NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 import BellIcon from "./images/bell.svg";
 import SettingsIcon from "./images/settings.svg";
 
@@ -10,7 +10,7 @@ const Header = () =>
             <nav>
                 <ul>
                     <li><a href="#">Groepen</a></li>
-                    <li><NavLink to="/contact">Contact</NavLink></li>
+                    <li><Link to="/contact">Contact</Link></li>
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">Smoelenboek</a></li>
                     <li><a href="#">Microblog</a></li>

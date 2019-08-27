@@ -8,13 +8,16 @@ import "./assets/images/favicon.ico";
 import ContactForm from "./components/ContactForm/ContactForm";
 
 const App = () =>
-    <BrowserRouter>
-        <Header />
-        <MainMenu />
-        <Switch>
-            <Route path="/" exact component={Dashboard} />
-            <Route path="/contact" component={ContactForm} />
-        </Switch>
+    <BrowserRouter basename={basePath}>
+        <div>
+            <Header/>
+            <MainMenu/>
+            <Switch>
+                <Route path="/" exact={true} component={Dashboard}/>
+                <Route path="/contact" component={ContactForm}/>
+                <Route path="*" component={Dashboard} />
+            </Switch>
+        </div>
     </BrowserRouter>;
 
 export default App;

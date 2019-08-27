@@ -9,7 +9,7 @@ const Likes = ({likes}) =>
     </div>;
 
 Likes.propTypes = {
-    likes: PropTypes.number.isRequired
+    likes: PropTypes.string.isRequired
 };
 
 export default Likes;
