@@ -1,8 +1,8 @@
 import React from "react";
 import "./Header.scss";
+import {NavLink} from "react-router-dom";
 import BellIcon from "./images/bell.svg";
 import SettingsIcon from "./images/settings.svg";
-import {NavLink} from "react-router-dom";
 
 const Header = () =>
     <header>

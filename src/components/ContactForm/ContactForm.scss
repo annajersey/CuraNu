@@ -1,64 +1,116 @@
 @import "../../assets/variables";
 
+$label-width: 120px;
+$red: #ff4964;
+
 .contactPage {
   display: flex;
   justify-content: space-between;
   padding-top: 50px;
 
   .sidebar {
-    flex-basis: 30%;
-    margin-left: -30px;
+    flex-basis: 20%;
+
+    ul {
+      padding: 0;
+    }
+
+    li {
+      border-bottom: 1px solid $blue;
+      height: 73px;
+      display: flex;
+      align-items: center;
+      font-family: $open-sans-bold;
+      color: $gray-blue;
+    }
   }
 
   .contactForm {
-    flex-basis: 65%;
+    flex-basis: 70%;
   }
 
   form {
     margin-top: 50px;
+  }
 
-    div.field {
-      display: flex;
-      width: 100%;
-      min-height: 60px;
-      align-items: flex-start;
+  .field {
+    display: flex;
+    width: 100%;
+    min-height: 70px;
+    align-items: center;
 
-      input {
-        width: 300px;
-        height: 35px;
-        border:1px solid $gray-blue;
-        border-radius: 15px;
-        padding: 0 15px;
-      }
+    &.message {
+      margin-top: 15px;
 
       label {
-        width: 150px;
-        font-family: $open-sans-bold;
+        align-self: flex-start;
       }
     }
 
+    &.invalid {
+      input, textarea {
+        border: 1px solid $red;
+      }
+    }
 
-    input[type=submit] {
-      margin-top: 20px;
+    input {
+      width: 300px;
       height: 35px;
+      border: 1px solid $gray-blue;
       border-radius: 15px;
-      width: 150px;
+      padding: 0 15px;
     }
 
-
-    textarea {
-      width: calc(100% - 150px);
-      border:1px solid $gray-blue;
-      border-radius: 15px;
-      padding:15px 20px;
-    }
-
-    input[type=text], input[type=email], textarea{
-      outline: none;
-      color:$gray-blue;
-      font-family: $open-sans;
-      font-size: 14px;
+    label {
+      width: $label-width;
+      font-family: $open-sans-bold;
     }
   }
-}
 
+  input[type=submit] {
+    margin-top: 20px;
+    height: 35px;
+    border-radius: 15px;
+    width: 150px;
+    float: right;
+  }
+
+  .textArea, .submitBlock {
+    width: calc(100% - #{$label-width});
+  }
+
+  .submitBlock {
+    float: right;
+  }
+
+  textarea {
+    width: 100%;
+    border: 1px solid $gray-blue;
+    border-radius: 15px;
+    padding: 15px 20px;
+  }
+
+  input[type=text], input[type=email], textarea {
+    outline: none;
+    color: $gray-blue;
+    font-family: $open-sans;
+    font-size: 14px;
+  }
+
+  .error {
+    color: $red;
+    font-size: 12px;
+    margin-top: 5px;
+    height: 15px;
+    margin-left: 5px;
+    position: absolute;
+  }
+
+  .success {
+    float: left;
+    margin-right: 10px;
+    color: #05A;
+    font-family: $open-sans-bold;
+    margin-top: 31px;
+  }
+}

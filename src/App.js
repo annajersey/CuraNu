@@ -4,9 +4,8 @@ import Header from "./components/Header/Header";
 import MainMenu from "./components/MainMenu/MainMenu";
 import Dashboard from "./components/Dashboard/Dashboard";
 import "./assets/styles.scss";
-import "./assets/images/favicon5.ico";
+import "./assets/images/favicon.ico";
 import ContactForm from "./components/ContactForm/ContactForm";
-
 
 const App = () =>
     <BrowserRouter>
@@ -16,6 +15,6 @@ const App = () =>
             <Route path="/" exact component={Dashboard} />
             <Route path="/contact" component={ContactForm} />
         </Switch>
-    </BrowserRouter>
+    </BrowserRouter>;
 
 export default App;

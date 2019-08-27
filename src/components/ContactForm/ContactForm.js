@@ -1,25 +1,46 @@
-import React, {useState} from 'react';
-import "./ContactForm.scss"
+import React, {useState} from "react";
+import cn from "classnames";
+import "./ContactForm.scss";
 import SideBar from "./SideBar";
 
+const NAME = "name";
+const EMAIL = "email";
+const TOPIC = "topic";
+const MESSAGE = "message";
+const emailPattern = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i;
+const emptyErrorText = "This field is required";
 const ContactForm = () => {
     const [fields, setFields] = useState({
-        "name": "",
-        "email": "",
-        "topic": "",
-        "message": "",
+        [NAME]: {value: "", error: "", isValid: false},
+        [EMAIL]: {value: "", error: "", isValid: false},
+        [TOPIC]: {value: "", error: "", isValid: false},
+        [MESSAGE]: {value: "", error: "", isValid: false}
     });
-    const [errors, setErrors] = useState({
-        "name": "",
-        "email": "",
-        "topic": "",
-        "message": "",
-    })
+    const [send, setSend] = useState(false);
 
-    const changeField = (field, value) => {
-        if (value==="") setErrors({...errors, [field]: "This field is required"})
-        setFields({...fields, [field]: value})
-    }
+    const onChangeField = (key, value) => {
+        const error = (value === "") ? emptyErrorText : "";
+        setFields({...fields, [key]: {value, error, isValid: error.length === 0}});
+    };
+
+    const validateEmail = (value) => {
+        if (!value.match(emailPattern))
+        {setFields({...fields, [EMAIL]: {value, error: "Please enter a valid email", isValid: false}});}
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const checkFields = {...fields};
+        Object.keys(fields).map(key => {
+            if (checkFields[key].value === "")
+            {checkFields[key] = {...checkFields[key], error: emptyErrorText, isValid: true};}
+        });
+
+        setFields(checkFields);
+        const isFormValid = (Object.values(fields).findIndex(field => !field.isValid) === -1);
+        if (!isFormValid) {return;}
+        setSend(true);
+    };
 
     return (
         <div className="container">
@@ -35,34 +56,51 @@ const ContactForm = () => {
                         pharetra orci. Nunc ultrices sit amet magna
                         non vestibulum. Morbi ut dignissim quam. Etiam eget pellentesque nisi</p>
                     <form>
-                        <div className="field">
+                        <div className={cn("field", {invalid: !!fields[NAME].error.length})}>
                             <label htmlFor="name">Naam</label>
-                            <input type="text" name="name" value={fields.name}
-                                   onChange={(e) => changeField("name", e.target.value)}/>
+                            <div><input required type="text" name="name" value={fields[NAME].value}
+                                onChange={(e) => onChangeField(NAME, e.target.value)}/>
+                            <div className="error">{fields[NAME].error}</div>
+                            </div>
                         </div>
-                        <div className="error">{errors.name}</div>
-                        <div className="field">
+
+                        <div className={cn("field", {invalid: !!fields[EMAIL].error.length})}>
                             <label htmlFor="email">Email</label>
-                            <input type="email" name="email" value={fields.email}
-                                   onChange={(e) => changeField("email", e.target.value)}/>
+                            <div><input required type="email" name="email" value={fields[EMAIL].value}
+                                onBlur={e => validateEmail(e.target.value)}
+                                onChange={e => onChangeField(EMAIL, e.target.value)}/>
+                            <div className="error">{fields[EMAIL].error}</div>
+                            </div>
                         </div>
-                        <div className="error">{errors.email}</div>
-                        <div className="field">
-                            <label htmlFor="topic" value={fields.topic}
-                                   onChange={(e) => changeField("topic", e.target.value)}>Onderwerp</label>
-                            <input type="text" name="topic"/>
+
+                        <div className={cn("field", {invalid: !!fields[TOPIC].error.length})}>
+                            <label htmlFor="topic">Onderwerp</label>
+                            <div><input required type="text" name="topic" value={fields[TOPIC].value}
+                                onChange={(e) => onChangeField(TOPIC, e.target.value)}
+                            />
+                            <div className="error">{fields[TOPIC].error}</div>
+                            </div>
                         </div>
-                        <div className="error">{errors.topic}</div>
-                        <div className="field">
+
+                        <div className={cn("field", "message", {invalid: !!fields[MESSAGE].error.length})}>
                             <label htmlFor="message">Bericht</label>
-                            <textarea
+                            <div className="textArea"><textarea
                                 name="message"
+                                required
                                 rows="10"
-                                onChange={(e) => changeField("message", e.target.value)}
-                                value={fields.message}/>
+                                onChange={(e) => onChangeField(MESSAGE, e.target.value)}
+                                value={fields[MESSAGE].value}/>
+                            <div className="error">{fields[MESSAGE].error}</div>
+                            </div>
                         </div>
-                        <div className="error">{errors.message}</div>
-                        <input type="submit" value="Verstuur" className="blueButton"/>
+                        <div className="submitBlock">
+                            {send && <div className="success">Thank you! Your message has been sent successfully</div>}
+                            <input type="submit"
+                                value="Verstuur"
+                                className="blueButton"
+                                onClick={handleSubmit}
+                            />
+                        </div>
                     </form>
                 </div>
             </div>
