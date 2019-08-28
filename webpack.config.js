@@ -8,7 +8,7 @@ module.exports = merge(baseConfig, {
         publicPath: basePath
     }, plugins: [
         new webpack.DefinePlugin({
-            basePath: basePath
+            basePath: JSON.stringify(basePath)
         }),
     ]
 });
