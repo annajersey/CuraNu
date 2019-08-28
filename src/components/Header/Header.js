@@ -15,7 +15,7 @@ const Header = () => {
                 <HamburgerButton/>
             </div>
             <nav className={cn({showMobileMenu})} >
-                <ul>
+                <ul onClick={() => setShowMobileMenu(!showMobileMenu)}>
                     <li><a href="#">Groepen</a></li>
                     <li><Link to="/contact">Contact</Link></li>
                     <li><a href="#">FAQ</a></li>

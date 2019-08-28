@@ -46,7 +46,11 @@ $red: #ff4964;
     width: 100%;
     min-height: 70px;
     align-items: center;
-
+    @media (#{$media-mobile}){
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 85px;
+    }
     &.message {
       margin-top: 15px;
 
@@ -84,6 +88,9 @@ $red: #ff4964;
 
   .textArea, .submitBlock {
     width: calc(100% - #{$label-width});
+    @media (#{$media-mobile}){
+      width: 100%;
+    }
   }
 
   .submitBlock {
