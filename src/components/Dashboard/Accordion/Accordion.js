@@ -5,7 +5,6 @@ import "../Widget/Widget.scss";
 import accordionData from "../../../mockData/accordion-data";
 
 const Accordion = (props) => {
-    const content = useRef(null);
     const [activeIndexes, setActiveIndexes] = useState([props.firstActiveItem]);
     const isItemActive = index => (activeIndexes.indexOf(index) >= 0);
     const accordionItems = accordionData.accordion.map(

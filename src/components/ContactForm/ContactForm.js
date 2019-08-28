@@ -63,26 +63,26 @@ const ContactForm = () => {
                         <div className={cn("field", {invalid: !!fields[NAME].error.length})}>
                             <label htmlFor="name">Naam</label>
                             <div><input required type="text" name="name" value={fields[NAME].value}
-                                        onChange={(e) => onChangeField(NAME, e.target.value)}/>
-                                <div className="error">{fields[NAME].error}</div>
+                                onChange={(e) => onChangeField(NAME, e.target.value)}/>
+                            <div className="error">{fields[NAME].error}</div>
                             </div>
                         </div>
 
                         <div className={cn("field", {invalid: !!fields[EMAIL].error.length})}>
                             <label htmlFor="email">Email</label>
                             <div><input required type="email" name="email" value={fields[EMAIL].value}
-                                        onBlur={e => validateEmail(e.target.value)}
-                                        onChange={e => onChangeField(EMAIL, e.target.value)}/>
-                                <div className="error">{fields[EMAIL].error}</div>
+                                onBlur={e => validateEmail(e.target.value)}
+                                onChange={e => onChangeField(EMAIL, e.target.value)}/>
+                            <div className="error">{fields[EMAIL].error}</div>
                             </div>
                         </div>
 
                         <div className={cn("field", {invalid: !!fields[TOPIC].error.length})}>
                             <label htmlFor="topic">Onderwerp</label>
                             <div><input required type="text" name="topic" value={fields[TOPIC].value}
-                                        onChange={(e) => onChangeField(TOPIC, e.target.value)}
+                                onChange={(e) => onChangeField(TOPIC, e.target.value)}
                             />
-                                <div className="error">{fields[TOPIC].error}</div>
+                            <div className="error">{fields[TOPIC].error}</div>
                             </div>
                         </div>
 
@@ -94,7 +94,7 @@ const ContactForm = () => {
                                 rows="10"
                                 onChange={(e) => onChangeField(MESSAGE, e.target.value)}
                                 value={fields[MESSAGE].value}/>
-                                <div className="error">{fields[MESSAGE].error}</div>
+                            <div className="error">{fields[MESSAGE].error}</div>
                             </div>
                         </div>
                         <div className="submitBlock">
