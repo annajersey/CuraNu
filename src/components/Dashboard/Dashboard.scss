@@ -6,16 +6,16 @@
 
 .grid-sizer {
   width: calc(33.33% - 13px);
-  @media (max-width : 1180px){
-    width: calc(48.5% - 13px);
+  @media (#{$media-xsmall}){
+    width: calc(50.5% - 15px);
+  }
+  @media (#{$media-xxsmall}){
+    width: 100%;
   }
 }
 
 .grid-block {
-  width: calc(33.33% - 13px);
-  @media (max-width : 1180px){
-    width: calc(48.5% - 13px);
-  }
+  @extend .grid-sizer;
   background: $white;
   margin-top: 20px;
 }

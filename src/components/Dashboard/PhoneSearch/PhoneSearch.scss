@@ -5,16 +5,17 @@
   background: $aqua-blue url("./images/telephone.png") no-repeat center right;
   padding: 11px 40px 11px 18px;
   color: $white;
-  line-height: 36px;
   font-family: $open-sans-bold;
 
   .phoneSearchTitle {
     font-size: 18px;
     text-transform: uppercase;
+    padding-bottom: 18px;
   }
 
   .phoneSearchDescription {
     font-size: 12px;
+    padding-bottom: 14px;
   }
 
   .searchPhone {
