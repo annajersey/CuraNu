@@ -6,15 +6,18 @@
 
 .grid-sizer {
   width: calc(33.33% - 13px);
+
   @media (#{$media-xsmall}){
     width: calc(50.5% - 15px);
   }
+
   @media (#{$media-xxsmall}){
     width: 100%;
   }
 }
 
 .grid-block {
+
   @extend .grid-sizer;
   background: $white;
   margin-top: 20px;

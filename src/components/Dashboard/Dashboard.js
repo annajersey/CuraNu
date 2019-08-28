@@ -19,7 +19,7 @@ import Blogs from "./Widgets/Blogs/Blogs";
 import AddWidgetButton from "./Widgets/AddWidgetButton/AddWidgetButton";
 
 const Dashboard = () => {
-    const setRerenderLayout = useState(1)[1];
+    const rerender = useState(1)[1];
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     useEffect(() => {
@@ -47,41 +47,41 @@ const Dashboard = () => {
             <Accordion className="grid-block"
                 firstActiveItem={1}
                 singleOpen={true}
-                setRerenderLayout={setRerenderLayout} />
+                rerender={rerender} />
 
-            <Widget type="links" title="Direct Naar" className="grid-block">
+            <Widget type="links" title="Direct Naar" className="grid-block" rerender={rerender}>
                 <Links data={linksData} />
             </Widget>
 
             <PhoneSearch className="grid-block" />
 
-            <Widget className="grid-block" type="events" title="EVENEMENTEN" showMore="Meer evenementen">
+            <Widget className="grid-block" type="events" title="EVENEMENTEN" showMore="Meer evenementen" rerender={rerender}>
                 <Events />
             </Widget>
 
-            <Widget type="blog" title="BLOGS" className="grid-block" showMore="Meer blogs">
+            <Widget type="blog" title="BLOGS" className="grid-block" showMore="Meer blogs" rerender={rerender}>
                 <Blogs posts={BlogPostData.posts} />
             </Widget>
 
-            <Widget type="blog" title="MICROBLOG" className="grid-block" showMore="Toon meer">
+            <Widget type="blog" title="MICROBLOG" className="grid-block" showMore="Toon meer" rerender={rerender}>
                 <MicroBlog />
             </Widget>
 
-            <Widget className="grid-block" type="events" title="NIEUWS" showMore="Meer nieuws">
+            <Widget className="grid-block" type="events" title="NIEUWS" showMore="Meer nieuws" rerender={rerender}>
                 <News />
             </Widget>
 
-            <Widget type="info" title="KWALITEITSHANDBOEK" className="grid-block" showMore="Naar kwaliteitshandboek">
+            <Widget type="info" title="KWALITEITSHANDBOEK" className="grid-block" showMore="Naar kwaliteitshandboek" rerender={rerender}>
                 <Info data={ManualLinksData} />
             </Widget>
 
-            <Widget className="grid-block" type="groups" title="MIJN GROEPEN" showMore="Meer groepen">
+            <Widget className="grid-block" type="groups" title="MIJN GROEPEN" showMore="Meer groepen" rerender={rerender}>
                 <Groups />
             </Widget>
 
             {!isSmallScreen && <div className="grid-block"><AddWidgetButton /></div>}
 
-            <Widget type="info" title="PEILINGEN" className="grid-block">
+            <Widget type="info" title="PEILINGEN" className="grid-block" rerender={rerender}>
                 <Polls />
             </Widget>
 
@@ -91,7 +91,7 @@ const Dashboard = () => {
                 <div className="grid-block"></div>
             </Fragment>}
 
-            <Widget type="links" title="MIJN LINKS" className="grid-block">
+            <Widget type="links" title="MIJN LINKS" className="grid-block" rerender={rerender}>
                 <Links data={MyLinksData} />
             </Widget>
 

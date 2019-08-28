@@ -1,10 +1,11 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useRef} from "react";
 import PropTypes from "prop-types";
 import AccordionItem from "./AccordionItem";
 import "../Widget/Widget.scss";
 import accordionData from "../../../mockData/accordion-data";
 
 const Accordion = (props) => {
+    const content = useRef(null);
     const [activeIndexes, setActiveIndexes] = useState([props.firstActiveItem]);
     const isItemActive = index => (activeIndexes.indexOf(index) >= 0);
     const accordionItems = accordionData.accordion.map(
@@ -17,7 +18,7 @@ const Accordion = (props) => {
         />);
 
     useEffect(() => {
-        setTimeout(() => props.setRerenderLayout(Math.random()), 400);
+        setTimeout(() => props.rerender(Math.random()), 400);
     }, [activeIndexes]);
 
     const toggleActive = (key) =>{
@@ -40,7 +41,7 @@ const Accordion = (props) => {
 
 Accordion.propTypes = {
     singleOpen: PropTypes.bool,
-    setRerenderLayout: PropTypes.func,
+    rerender: PropTypes.func,
     firstActiveItem: PropTypes.number,
     className: PropTypes.string
 };
