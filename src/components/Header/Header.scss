@@ -113,10 +113,10 @@ header {
   }
 
   .mobileHide {
-    visibility: hidden;
+    display: none;
 
     @media (#{$media-xsmall}) {
-      visibility: visible;
+      display: flex;
     }
 
     svg {
