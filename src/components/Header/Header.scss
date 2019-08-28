@@ -91,6 +91,7 @@ header {
 
     .logoTitle {
       margin-left: 10px;
+      font-family: "Raleway Light", sans-serif;
 
       a {
         color: #000;
@@ -103,12 +104,11 @@ header {
     }
 
     .logoSubtitle {
-      font-family: "Raleway Light", sans-serif;
       font-size: 14px;
     }
 
     span {
-      font-family: $open-sans-light;
+      font-family: "Raleway Bold", sans-serif;
     }
   }
 

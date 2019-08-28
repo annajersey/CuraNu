@@ -1,6 +1,7 @@
 {
   "ignoreFiles": [
     "**/*.png",
+    "**/*.ico",
     "**/*.woff",
     "**/*.woff2",
     "**/*.ttf",

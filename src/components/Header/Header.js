@@ -33,7 +33,7 @@ const Header = () => {
         </div>
         <div className="container logo">
             <div><Link to="/"><img src={require("./images/logo.png")}/></Link></div>
-            <div className="logoTitle"><Link to="/">Cura<span>Nu</span>
+            <div className="logoTitle"><Link to="/"><span>Cura</span>Nu
                 <div className="logoSubtitle">Zorg en welzijn</div>
             </Link></div>
             <div className="subtitle">Intranet</div>
