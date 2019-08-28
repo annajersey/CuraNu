@@ -49,8 +49,9 @@
   padding-left: 17px;
   line-height: 49px;
 
-  @media (max-width: 1370px) {
-    font-size: 17px;
+  @media (min-width: 1180px) and (max-width: 1281px) { //fix for long widget titles
+    font-size: 16px;
+    padding-left: 10px;
   }
 }
 

@@ -12,7 +12,7 @@ const Widget = ({title, className, type, children, showMore, rerender}) => {
         setHeight(height === 0 ? content.current.scrollHeight : 0);
         setTimeout(() => rerender(Math.random()), 100);
     };
-    console.log(height);
+
     return <div className={`widget ${className}`}>
         <div className="widgetHeader">
             <div className="widgetIcon icon">{type&&<img src={require(`./widgetIcons/${type}.png`)} />}</div>

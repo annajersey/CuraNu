@@ -3,14 +3,22 @@
 .mainMenu {
   background: #9E419C;
 
-  //@media screen and (max-width: 1335px) {
-  //  display: inline-flex;
-  //}
   .container {
     height: 85px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (#{$media-xsmall}){
+      display: block;
+      height: 140px;
+    }
+  }
+  nav{
+    @media (#{$media-xsmall}){
+      height: 70px;
+      line-height: 70px;
+    }
+
   }
   ul{
     padding: 0;
@@ -37,6 +45,10 @@
       font-size: 16px;
       outline: none;
       padding: 0 15px;
+      @media (#{$media-xsmall}){
+        width:100%;
+        width:100%;
+      }
     }
 
     .searchButton {
