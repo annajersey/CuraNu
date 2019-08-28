@@ -2,10 +2,12 @@
 
 .widget {
   border: 1px solid $blue;
+
   .widgetContentWrapper {
     overflow: hidden;
     transition: height .2s ease;
   }
+
   .widgetContent {
     font-size: 14px;
     font-family: $open-sans;
@@ -55,6 +57,14 @@
   }
 }
 
+.closed {
+  .widgetButtons {
+    .hideButton {
+      transform: none;
+    }
+  }
+}
+
 .widgetButtons {
   display: flex;
   margin-left: auto;
@@ -69,6 +79,7 @@
   .hideButton {
     transform: rotate(90deg);
     flex-basis: 45px;
+    transition: transform .2s ease;
   }
 
   svg {

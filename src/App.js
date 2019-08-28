@@ -6,7 +6,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import "./assets/styles.scss";
 import "./assets/images/favicon.ico";
 import ContactForm from "./components/ContactForm/ContactForm";
-console.log(basePath);
+
 const App = () =>
     <BrowserRouter basename={basePath}>
         <div>

@@ -8,17 +8,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     @media (#{$media-xsmall}){
       display: block;
-      height: 140px;
+      height: auto;
+      padding-bottom: 20px;
     }
   }
   nav{
-    @media (#{$media-xsmall}){
+
+    @media  (#{$media-xxsmall-from}) and (#{$media-xsmall}){
       height: 70px;
       line-height: 70px;
     }
 
+    @media (#{$media-xxsmall}){
+      height: auto;
+      line-height: 45px;
+      padding: 15px 0;
+    }
   }
   ul{
     padding: 0;
@@ -26,6 +34,10 @@
   li {
     display: inline-block;
     margin-right: 53px;
+
+    @media (#{$media-xxsmall}){
+      display: block;
+    }
     a {
       font-size: 16px;
       color: $white;
@@ -45,9 +57,10 @@
       font-size: 16px;
       outline: none;
       padding: 0 15px;
+
       @media (#{$media-xsmall}){
-        width:100%;
-        width:100%;
+        width: 100%;
+        width: 100%;
       }
     }
 

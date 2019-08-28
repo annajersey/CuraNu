@@ -55,7 +55,7 @@ const Dashboard = () => {
 
             <PhoneSearch className="grid-block" />
 
-            <Widget className="grid-block" type="events" title="EVENEMENTEN" showMore="Meer evenementen" rerender={rerender}>
+            <Widget className="grid-block long" type="events" title="EVENEMENTEN" showMore="Meer evenementen" rerender={rerender}>
                 <Events />
             </Widget>
 
@@ -71,11 +71,11 @@ const Dashboard = () => {
                 <News />
             </Widget>
 
-            <Widget type="info" title="KWALITEITSHANDBOEK" className="grid-block" showMore="Naar kwaliteitshandboek" rerender={rerender}>
+            <Widget type="info" title="KWALITEITSHANDBOEK" className="grid-block long" showMore="Naar kwaliteitshandboek" rerender={rerender}>
                 <Info data={ManualLinksData} />
             </Widget>
 
-            <Widget className="grid-block" type="groups" title="MIJN GROEPEN" showMore="Meer groepen" rerender={rerender}>
+            <Widget className="grid-block long" type="groups" title="MIJN GROEPEN" showMore="Meer groepen" rerender={rerender}>
                 <Groups />
             </Widget>
 

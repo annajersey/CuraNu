@@ -1,5 +1,6 @@
 import React, {useRef, useState} from "react";
 import PropTypes from "prop-types";
+import cn from "classnames";
 import "./Widget.scss";
 import Arrow from "../../../assets/images/arrow-right.svg";
 import CloseButton from "../../../assets/images/close-button.svg";
@@ -13,7 +14,7 @@ const Widget = ({title, className, type, children, showMore, rerender}) => {
         setTimeout(() => rerender(Math.random()), 100);
     };
 
-    return <div className={`widget ${className}`}>
+    return <div className={cn("widget", className, {closed: height===0})} >
         <div className="widgetHeader">
             <div className="widgetIcon icon">{type&&<img src={require(`./widgetIcons/${type}.png`)} />}</div>
             <div className="widgetTitle">{title}</div>
