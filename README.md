@@ -9,10 +9,14 @@ Please see the result here: https://annajersey.github.io/assignment/
   * SASS
   * Webpack
   * Eslint, Stylelint
+  * Jest, Enzyme
   
 #### Description:    
-The Dashboard page is made by provided mockup.  The whole application is built with React using React Hooks. Design is responsive and can be viewed on desktop, tablet or mobile. The accordion can be customized to have single/multiple open items and default opened item. Also, each block is collapsible. Widgets use mock json data.
-To open Contact Form - click on the "Contact" link in the top menu. The form is auto-validated while the user is typing.
+The Dashboard page is made by provided mockup.  The whole application is built with React using React Hooks. Design is responsive and can be viewed on desktop, tablet or mobile. 
+The accordion is a custom component and can be customized to have single/multiple open items and default opened item. Also, each block is collapsible. Widgets use mock json data.
+
+#####Contact Form
+To open Contact Form - click on the "Contact" link in the top menu. All fields are auto-validated while user is typing.
 ### Instructions for local installation
   * Clone the repository
     
