@@ -8,7 +8,7 @@ const BlogPost = ({post}) => {
         <div className="blogPost">
             <div className="postHeader">
                 <img className="profilePicture"
-                    src={require(`../../../../assets/images/ProfilePictures/${post.profilePicture}.png`)} />
+                    src={require(`./images/ProfilePictures/${post.profilePicture}.png`)} />
                 <div>
                     <div className="author">{post.name}</div>
                     <div className="postDateTime">{post.datetime}</div>
@@ -21,7 +21,7 @@ const BlogPost = ({post}) => {
             </div>
             <div className="postContent">
                 {post.content}
-                {post.image && <img src={require(`../../../../assets/images/BlogData/${post.image}.png`)} />}
+                {post.image && <img src={require(`./images/PostData/${post.image}.png`)} />}
                 {post.url && <a className="postLink" href={post.url}>Lees meer en reacties (0)</a>}
             </div>
         </div>
