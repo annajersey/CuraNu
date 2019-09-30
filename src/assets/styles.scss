@@ -28,12 +28,18 @@
 
 @font-face {
   font-family: "Raleway Light";
-  src: url("fonts/raleway-light.ttf");
+  src: url("fonts/raleway-light.ttf"),
+    url("fonts/raleway-light.eot"),
+    url("fonts/raleway-light.woff2") format("woff2"),
+    url("fonts/raleway-light.woff") format("woff");
 }
 
 @font-face {
   font-family: "Raleway Bold";
-  src: url("fonts/raleway-bold.ttf");
+  src: url("fonts/raleway-bold.ttf"),
+    url("fonts/raleway-bold.eot"),
+    url("fonts/raleway-bold.woff2") format("woff2"),
+    url("fonts/raleway-bold.woff") format("woff");
 }
 
 * {
